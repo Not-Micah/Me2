@@ -5,6 +5,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import Button from "./components/Button";
 import ChatContainer from "./components/ChatContainer";
 import RegisterUser from "./components/RegisterUser";
+import LandingPage from "./components/LandingPage";
 
 import {
   getUserAuth,
@@ -49,9 +50,7 @@ const Home = () => {
         ) : user ? (
             <RegisterUser />
         ) : (
-          <div className="flex justify-center items-center h-[100vh]">
-            <Button onClick={signIn}>Sign Up</Button>{" "}
-          </div>
+          <LandingPage />
         )}
       </section>
     </div>

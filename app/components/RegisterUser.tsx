@@ -28,23 +28,26 @@ const RegisterUser = () => {
       };
 
     return (
-        <form className='flex flex-col gap-y-4 m-14' onSubmit={handleSubmit}>
+        <div className="justify-center align-middle content-center place-self-center place-content-center self-center m-10">
+        <form className='flex flex-col gap-y-5 m-14 bg-[#eaeaea] p-10' onSubmit={handleSubmit}>
             <div className="">
-                <h2 className='uppercase font-semibold text-3xl'>Register Your Information</h2>
-                <p className='text-gray-400 italic'>Me2 ensures your data is kept safe and not used in mal practice.</p>
+                <h2 className='font-semibold text-3xl'>Register here:</h2>
+                <p className='text-gray-400 italic font-semibold mt-2'>Me2 ensures your data is kept safe and not used in malpractice.</p>
+            </div>
+            <div className="flex flex-row gap-x-7">
+              <div className="basis-1/2">
+                  <p className='text-lg font-bold'>Username</p>
+                  <input type="text" placeholder='Enter Here...' onChange={(e) => setUserName(e.target.value)}
+                  className='input-field' />
+              </div>
+              <div className="basis-1/2">
+                  <p className='text-lg font-bold'>Age</p>
+                  <input type="number" placeholder='Enter Here...' onChange={(e) => setUserAge(e.target.value)}
+                  className='input-field'/>
+              </div>
             </div>
             <div className="">
-                <p className='sub-heading'>User Name</p>
-                <input type="text" placeholder='Enter Here...' onChange={(e) => setUserName(e.target.value)}
-                className='input-field' />
-            </div>
-            <div className="">
-                <p className='sub-heading'>Age</p>
-                <input type="number" placeholder='Enter Here...' onChange={(e) => setUserAge(e.target.value)}
-                className='input-field'/>
-            </div>
-            <div className="">
-                <p className='sub-heading'>Curriculum</p>
+                <p className='text-lg font-bold'>Curriculum</p>
                 <Select options={curriculums}
                 onChange={(curr) => {
                     if (curr) {
@@ -53,7 +56,7 @@ const RegisterUser = () => {
                 }} />
             </div>
             <div className="">
-                <p className='sub-heading'>Location</p>
+                <p className='text-lg font-bold'>Location</p>
                 <Select options={locations} 
                 onChange={(loc) => {
                     if (loc) {
@@ -62,7 +65,7 @@ const RegisterUser = () => {
                 }}/>
             </div>
             <div className="">
-                <p className='sub-heading'>Hobbies</p>
+                <p className='text-lg font-bold'>Hobbies</p>
                 <Select options={hobbies} isMulti 
                 onChange={(hobbies) => {
                     if (hobbies) {
@@ -74,11 +77,12 @@ const RegisterUser = () => {
                 }}/>
             </div>
             <div className="">
-                <button className='uppercase text-xl font-semibold bg-gray-500/10 py-2 px-2 rounded-md shadow-sm mt-5' type='submit'>
+                <button className='w-full text-xl text-white font-semibold bg-black py-2 px-2 rounded-md shadow-sm mt-5' type='submit'>
                     Submit
                 </button>
             </div>
         </form>
+        </div>
     )
 };
 

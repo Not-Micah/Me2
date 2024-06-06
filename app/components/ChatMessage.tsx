@@ -14,9 +14,10 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ document }) => {
 
   return (
     <div
-      className={`${messageClass == "sent" ? "text-blue-500" : "text-red-500"}`}
+      className={`${messageClass == "sent" ? "text-blue-500 text-end mt-2" : "text-red-500 mt-2"}`}
     >
       {document.text}
+      
     </div>
   );
 };

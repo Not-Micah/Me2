@@ -18,16 +18,18 @@ const ChatContainer = () => {
     return (
       <div className="">
         <div>
-          Chat:
+          <div className="font-bold text-xl mb-2">
+            Chat:
+          </div>
           {messages &&
             messages.map((msg, index) => (
               <ChatMessage key={index} document={msg} />
             ))}
         </div>
         <div ref={dummy}></div>
-        <form onSubmit={handleSubmit}>
-          <input value={formValue} onChange={((e) => setFormValue(e.target.value))} type="text" />
-          <button type="submit">Send</button>
+        <form onSubmit={handleSubmit} className="mt-5">
+          <input value={formValue} onChange={((e) => setFormValue(e.target.value))} type="text"/>
+          <button type="submit" className="ml-5">Send</button>
         </form>
       </div>
     );
