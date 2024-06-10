@@ -41,6 +41,7 @@ const UserDisplay: React.FC<UserDisplayProps> = ({
                     ? auth.currentUser.uid + u.uid
                     : u.uid + auth.currentUser.uid;
 
+                console.log(checkChat(chatid, chats))
                 if (!checkChat(chatid, chats)) {
                   createChat(chatid, auth.currentUser.uid, u.uid, true);
                 }

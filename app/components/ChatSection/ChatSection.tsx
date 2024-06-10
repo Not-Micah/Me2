@@ -17,6 +17,12 @@ const ChatSection = ({  }) => {
   const dummy = useRef<HTMLDivElement>(null);
   ///////
 
+  if (!currentChat) {
+    return <div className="flex justify-center items-center h-full">
+      <p>No chat selected</p>
+    </div>
+  }
+
   return (
     <div
     className="
