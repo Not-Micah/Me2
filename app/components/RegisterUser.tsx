@@ -4,7 +4,6 @@
 import { useState } from 'react';
 import Select from 'react-select'
 import { useRouter } from 'next/navigation';
-import { Input, InputGroup, InputLeftElement} from '@chakra-ui/react';
 
 // Own Function Imports
 import { curriculums, locations, hobbies } from '../data';
