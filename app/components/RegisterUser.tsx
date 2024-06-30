@@ -46,7 +46,7 @@ const RegisterUser = () => {
             <div className="bg-white h-[785px] sm:w-[485px] md:w-[565px] lg:w-[760px]">
               <div className="flex justify-center">
                 <form className='flex flex-col gap-y-4 m-14 sm:w-[310px] md:w-[360px] lg:w-[485px]' onSubmit={handleSubmit}>
-                  <div className="mt-[40px]">
+                  <div className="mt-[60px]">
                       <h2 className='font-semibold text-[40px] text-center'>Register here!</h2>
                       <div className='flex justify-center mt-[5px]'>
                         <p className='flex text-[#4D4D4D] italic text-center text-[20px] mt-[15px] m-10 mb-[-20px] sm:w-[310px] md:w-[360px] lg:w-[485px]'>Me2 ensures your data is kept safe and not used in malpractice</p>
